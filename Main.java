@@ -11,8 +11,7 @@ public class Main {
 
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                String elementsOfArray = in.next();
-                a[i][j] = elementsOfArray.charAt(0);
+                a[i][j] = in.next().charAt(0);
             }
         }
 
@@ -63,12 +62,12 @@ public class Main {
 
                     else  if (countLowerSymbols1 == countLowerSymbols2){
                         int j = 0;
-                        while (j < M || !needToSwap) {
+                        while (j < M && !needToSwap) {
                             if (a[i][j] != a[i + 1][j]) {
                                 if (a[i][j] > a[i + 1][j])
                                     needToSwap = true;
-                                j++;
                             }
+                            j++;
                         }
 
 
